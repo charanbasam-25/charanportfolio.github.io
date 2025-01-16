@@ -8,64 +8,64 @@ const Home = () => {
   };
 
   return (
-    <div className="Home bg-amber-950 p-20 h-screen flex flex-col justify-center items-center" id="home">
-      <div className="flex lg:justify-center items-center">
-        <div className="lg:flex lg:justify-center lg:items-center ">
-          <div className="rounded-full border border-beige flex justify-center items-center lg:h-56 lg:w-56 sm:h-10 sm:w-10 md:h-32 md:w-32 rounded-full hover:scale-110 transform hover:scale-110 transition-transform duration-300">
-            <img
-              alt="profileImage"
-              loading="lazy"
-              src="https://i.imgur.com/QM44mzd.png"
-              title="source: imgur.com"
-              className="lg:h-40 lg:w-40 sm:h-10 sm:w-10 md:h-32 md:w-32 rounded-full"
-            />
-          </div>
-          <div className="py-10 lg:px-20">
-            <h1 className="text-beige font-mono text-3xl font-bold">Web developer</h1>
-            <h2 className="text-beige font-mono text-xl font-bold text-gradient py-2">Building Better Web</h2>
-          </div>
+    <div className="home bg-gradient-to-b from-gray-800 via-gray-900 to-black text-white p-20 h-screen flex flex-col justify-center items-center" id="home">
+      <div className="flex justify-center items-center flex-col md:flex-row">
+        {/* Profile Image Section */}
+        <div className="rounded-full border-4 border-indigo-500 p-2 md:h-56 md:w-56 h-40 w-40 hover:scale-110 transform transition-transform duration-300">
+          <img
+            alt="profile"
+            loading="lazy"
+            src="https://i.imgur.com/QM44mzd.png"
+            className="h-full w-full rounded-full"
+          />
         </div>
-      </div>
-      <div className="resume-contact mt-32 flex flex-row items-center">
+        {/* Intro Section */}
+        <div className="text-center md:text-left md:ml-10 mt-6 md:mt-0">
+          <h1 className="text-5xl font-extrabold text-indigo-400">Charan Kumar</h1>
+          <h2 className="text-3xl font-semibold text-indigo-300 mt-2">Web Developer</h2>
+          <h3 className="text-xl font-medium mt-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-green-400 to-green-500">
+            Building Better Web
+          </h3>
+        </div>
+        </div>
+        {/* Resume & Contact Buttons */}
+      <div className="mt-12 flex flex-col md:flex-row items-center">
         <a
-          className="px-12 py-4 mx-4 bg-beige font-mono rounded-md flex justify-center items-center hover:scale-110 transform hover:scale-110 transition-transform duration-300"
-          href="https://drive.google.com/file/d/1zIot4ll_S_BQOuNKQ9tgjdk3FgSveMy9/view"
+          className="px-8 py-4 mx-2 bg-indigo-500 text-white font-medium rounded-lg shadow-md hover:bg-indigo-600 transform hover:scale-105 transition-transform duration-300"
+          href="https://drive.google.com/file/d/14ThTD1RQxyA7biehfnuvdRw2qohZqjK-/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="inline-block">Resume</span>
+          Resume
           <img
-            className="inline-block ml-4 h-4 w-4"
-            width="24"
-            height="24"
+            className="inline-block ml-3 h-5 w-5"
             src="https://img.icons8.com/material-rounded/24/download--v1.png"
-            alt="download--v1"
+            alt="download icon"
           />
         </a>
         <div
-          className="px-12 py-4 mx-4 bg-beige font-mono font-medium rounded-md flex justify-center items-center hover:scale-110 transform hover:scale-110 transition-transform duration-300 tooltip-trigger"
+          className="px-8 py-4 mx-2 bg-indigo-500 text-white font-medium rounded-lg shadow-md flex items-center cursor-pointer hover:bg-indigo-600 transform hover:scale-105 transition-transform duration-300"
           onMouseEnter={handleTooltipToggle}
           onMouseLeave={handleTooltipToggle}
-          style={{ position: 'relative', zIndex: 2 }}
+          style={{ position: 'relative' }}
         >
-          <p className="inline-block">Contact</p>
+          Contact
           <img
-            className="inline-block ml-4 h-4 w-4"
-            width="50"
-            height="50"
+            className="inline-block ml-3 h-5 w-5"
             src="https://img.icons8.com/ios-filled/50/new-post.png"
-            alt="new-post"
+            alt="contact icon"
           />
           {showTooltip && (
-            <div className="tooltip bg-beige text-black text-sm px-2 py-1 rounded absolute z-10 top-0 transform -translate-y-full opacity-100">
+            <div className="tooltip bg-gray-800 text-white text-sm px-4 py-2 rounded absolute top-0 transform -translate-y-full mt-2 shadow-lg">
               be.charankumar@gmail.com
+              <br />
+              7659067911
             </div>
           )}
         </div>
       </div>
     </div>
+  );
+};
 
-    )
-}
-
-export default Home
+export default Home;
