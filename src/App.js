@@ -1,9 +1,8 @@
 import './App.css';
 import Header from './components/Header';
 import About from './components/About';
-import Skills from './components/Skills';
 import Home from './components/Home';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Routes, Route } from 'react-router-dom';
 import Projects from './components/Projects';
 
 function App() {
