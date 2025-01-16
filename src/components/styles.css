@@ -17,3 +17,63 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+
+  /* Add this to your CSS/SCSS file */
+
+@keyframes animateStars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+.stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF,134px 1321px #FFF,1882px 812px #FFF,622px 731px #FFF,
+              1173px 1302px #FFF,1241px 1212px #FFF,1373px 154px #FFF,1598px 1425px #FFF,
+              326px 844px #FFF,1663px 1293px #FFF,1526px 390px #FFF,558px 1202px #FFF,
+              1940px 1143px #FFF,1277px 1125px #FFF,1382px 997px #FFF,176px 1274px #FFF,
+              1244px 523px #FFF,968px 565px #FFF,1432px 889px #FFF,1276px 1437px #FFF,
+              1988px 1048px #FFF,544px 265px #FFF,1594px 336px #FFF,123px 61px #FFF,
+              714px 1203px #FFF,1939px 1061px #FFF,1641px 1364px #FFF,1429px 1003px #FFF,
+              1625px 1276px #FFF,1032px 1383px #FFF,1132px 1117px #FFF,1228px 1226px #FFF;
+  animation: animateStars 150s linear infinite;
+}
+
+.stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF,134px 1321px #FFF,1882px 812px #FFF,622px 731px #FFF,
+              1173px 1302px #FFF,1241px 1212px #FFF,1373px 154px #FFF,1598px 1425px #FFF,
+              326px 844px #FFF,1663px 1293px #FFF,1526px 390px #FFF,558px 1202px #FFF;
+  animation: animateStars 100s linear infinite;
+}
+
+.stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF,134px 1321px #FFF,1882px 812px #FFF,622px 731px #FFF,
+              1173px 1302px #FFF,1241px 1212px #FFF,1373px 154px #FFF,1598px 1425px #FFF;
+  animation: animateStars 50s linear infinite;
+}
+
+/* Add a subtle glow effect to the profile section */
+.home::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(20px);
+  z-index: 0;
+}
